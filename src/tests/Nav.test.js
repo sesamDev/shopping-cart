@@ -8,7 +8,7 @@ import userEvent from "@testing-library/user-event";
 describe("Does links work", () => {
   it("home button loads home component", () => {
     render(<App />);
-    const homeButton = screen.getByRole("link", { name: "Home" });
+    const homeButton = screen.getByRole("heading", { text: "fake store" });
 
     userEvent.click(homeButton);
     expect(screen.getByTestId("home")).toBeInTheDocument();
