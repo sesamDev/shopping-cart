@@ -22,6 +22,6 @@ a {
   color: black;
 }
 
-h1 {
+.Nav > a > h1 {
   margin-left: 3rem;
 }
