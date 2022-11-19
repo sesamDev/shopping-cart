@@ -1,5 +1,27 @@
 .Nav {
   width: 100vw;
   min-height: 200px;
-  background-color: aquamarine;
+  background-color: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.nav-links {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  margin-right: 3rem;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  margin-left: 3rem;
 }

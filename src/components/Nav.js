@@ -6,11 +6,10 @@ import React from "react";
 const Nav = () => {
   return (
     <nav className="Nav" data-testid="nav">
-      <h1>Fake Store</h1>
-      <ul>
-        <Link to="/">
-          <li>Home</li>
-        </Link>
+      <Link to="/">
+        <h1>Fake Store</h1>
+      </Link>
+      <ul className="nav-links">
         <Link to="/catalog">
           <li>Catalog</li>
         </Link>
