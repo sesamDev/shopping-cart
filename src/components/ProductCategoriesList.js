@@ -4,26 +4,24 @@ import React from "react";
 
 const ListItem = (props) => {
   return (
-    <div className="listItem">
-      <p>{props.title}</p>
+    <div className="listItem" data-testid="listItem">
+      {props.category.title}
     </div>
   );
 };
 
-const ProductCategoriesList = () => {
+const appendListItems = (products) => {
+  return Object.keys(products.category).map((product) => {
+    return <ListItem category={products.category[product]} key={products.category[product].id} />;
+  });
+};
+
+const ProductCategoriesList = (props) => {
   return (
-    <div className="productCategoriesList">
+    <div className="productCategoriesList" data-testid="productCategoriesList">
       <h2>Categories</h2>
       <div className="line"></div>
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
-      <ListItem title="Test Category" />
+      {appendListItems(props.products)}
     </div>
   );
 };
