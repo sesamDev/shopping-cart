@@ -26,7 +26,7 @@ const Catalog = () => {
   return (
     <div data-testid="catalog" className="catalog">
       <ProductCategoriesList products={products} handleCategoryClick={handleCategoryClick} />
-      {appendAllProducts(products)}
+      <div className="catalogOverview">{appendAllProducts(products)}</div>
     </div>
   );
 };

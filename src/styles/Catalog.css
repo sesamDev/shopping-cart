@@ -1,6 +1,16 @@
 .catalog {
   display: grid;
   grid-template-columns: 0.2fr 1fr;
-  width: 100vw;
-  heigth: 100%;
+  justify-content: center;
+  height: 100%;
+}
+
+.catalogOverview {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(auto-fill, 300px);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
