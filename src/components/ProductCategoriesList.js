@@ -25,8 +25,12 @@ const renderListItems = (products, handleClick) => {
 const ProductCategoriesList = (props) => {
   return (
     <div className="productCategoriesList" data-testid="productCategoriesList">
-      <h2>{props.activeCategory === "" ? "Category" : "Category // " + props.activeCategory}</h2>
+      <h2>
+        Category //<br></br>
+        {props.activeCategory}
+      </h2>
       <div className="line"></div>
+      <ListItem category={"All"} key={"All"} handleClick={props.handleClick} />
       {renderListItems(props.products, props.handleClick)}
     </div>
   );

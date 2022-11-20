@@ -1,32 +1,43 @@
 import "../../styles/Catalog.css";
 
+import React, { useEffect, useState } from "react";
+
 import Card from "../Card";
 import ProductCategoriesList from "../ProductCategoriesList";
-import React from "react";
 import { products } from "../../data/products";
 
-const handleCategoryClick = () => {
-  return console.log("Category selected");
-};
+const renderProducts = (activeCategory, products) => {
+  const filteredProducts = products.filter((category) => category.category === activeCategory);
+  let productList = products;
 
-const appendAllProducts = (products) => {
-  const allItems = Object.keys(products.category).map((c) => {
-    return Object.keys(products.category[c].items).map((i) => {
-      return products.category[c].items[i];
-    });
-  });
-  return allItems.map((category) => {
-    return category.map((item) => {
-      return <Card img={item.img} title={item.title} price={item.price} key={item.title} />;
+  if (activeCategory !== "All") {
+    productList = filteredProducts;
+  }
+  return productList.map((category) => {
+    return category.items.map((item) => {
+      return <Card img={item.img} title={item.title} price={item.price} key={item.id} />;
     });
   });
 };
 
 const Catalog = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const handleCategoryClick = (e) => {
+    return setActiveCategory(e.target.innerText);
+  };
+
+  useEffect(() => {
+    //
+    return () => {
+      //
+    };
+  }, [activeCategory]);
+
   return (
     <div data-testid="catalog" className="catalog">
-      <ProductCategoriesList products={products} handleCategoryClick={handleCategoryClick} />
-      <div className="catalogOverview">{appendAllProducts(products)}</div>
+      <ProductCategoriesList products={products} handleClick={handleCategoryClick} activeCategory={activeCategory} />
+      <div className="catalogOverview">{renderProducts(activeCategory, products)}</div>
     </div>
   );
 };
