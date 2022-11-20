@@ -24,34 +24,34 @@ export const products = [
     img: macbook,
     id: uniqid(),
     items: [
-      [
-        {
-          title: "Iphone 14",
-          img: iphone14,
-          price: 1200,
-        },
-      ],
-      [
-        {
-          title: "iPad Pro",
-          img: ipadPro,
-          price: 1700,
-        },
-      ],
-      [
-        {
-          title: "Apple Watch Ultra",
-          img: appleWatchUltra,
-          price: 999,
-        },
-      ],
-      [
-        {
-          title: "MacBook Pro",
-          img: macbook,
-          price: 2200,
-        },
-      ],
+      {
+        title: "Iphone 14",
+        img: iphone14,
+        price: 1200,
+        id: uniqid(),
+      },
+
+      {
+        title: "iPad Pro",
+        img: ipadPro,
+        price: 1700,
+        id: uniqid(),
+      },
+
+      {
+        title: "Apple Watch Ultra",
+        img: appleWatchUltra,
+        price: 999,
+
+        id: uniqid(),
+      },
+
+      {
+        title: "MacBook Pro",
+        img: macbook,
+        price: 2200,
+        id: uniqid(),
+      },
     ],
   },
   {
@@ -63,21 +63,26 @@ export const products = [
         title: "ASUS TUF GeForce RTX 4090 24GB Gaming OC",
         img: rtx4090,
         price: 2600,
+        id: uniqid(),
       },
       {
         title: "ASUS TUF GeForce RTX 3080 10GB Gaming OC V2 (LHR)",
         img: rtx3080,
         price: 1100,
+        id: uniqid(),
       },
       {
         title: "ASUS GeForce RTX 3060 12GB PHOENIX V2 (LHR)",
         img: rtx3060,
         price: 400,
+
+        id: uniqid(),
       },
       {
         title: "ASUS ROG Strix GeForce RTX 3070 Ti Gaming OC 8GB",
         img: rtx3070,
         price: 1000,
+        id: uniqid(),
       },
     ],
   },
@@ -91,21 +96,29 @@ export const products = [
         title: "AMD Ryzen 7 5800X3D",
         img: ryzen7,
         price: 400,
+
+        id: uniqid(),
       },
       {
-        title: "IAMD Ryzen 5 5600X",
+        title: "AMD Ryzen 5 5600X",
         img: ryzen5,
         price: 200,
+
+        id: uniqid(),
       },
       {
         title: "Intel Core i7-13700K",
         img: corei7,
         price: 600,
+
+        id: uniqid(),
       },
       {
         title: "Intel Core i9-13900K",
         img: corei9,
         price: 800,
+
+        id: uniqid(),
       },
     ],
   },
@@ -118,21 +131,29 @@ export const products = [
         title: "Logitech MX Keys",
         img: mxkeys,
         price: 120,
+
+        id: uniqid(),
       },
       {
         title: "Razer Blackwidow V3",
         img: keyboard,
         price: 130,
+
+        id: uniqid(),
       },
       {
         title: "Keychron K2v2 RGB Aluminium Hot-Swap Gateron Brown",
         img: keychron,
         price: 120,
+
+        id: uniqid(),
       },
       {
         title: "Steelseries Apex 3 TKL",
         img: steelseries,
         price: 60,
+
+        id: uniqid(),
       },
     ],
   },
