@@ -2,26 +2,32 @@ import "../styles/ProductCategoriesList.css";
 
 import React from "react";
 
-const ListItem = (props) => {
+const ListItem = (product) => {
   return (
-    <div className="listItem" data-testid="listItem">
-      {props.category.title}
+    <div
+      className="listItem"
+      data-testid="listItem"
+      onClick={(e) => {
+        product.handleClick(e);
+      }}
+    >
+      {product.category}
     </div>
   );
 };
 
-const appendListItems = (products) => {
-  return Object.keys(products.category).map((product) => {
-    return <ListItem category={products.category[product]} key={products.category[product].id} />;
+const renderListItems = (products, handleClick) => {
+  return products.map((item) => {
+    return <ListItem category={item.category} key={item.id} handleClick={handleClick} />;
   });
 };
 
 const ProductCategoriesList = (props) => {
   return (
     <div className="productCategoriesList" data-testid="productCategoriesList">
-      <h2>Categories</h2>
+      <h2>{props.activeCategory === "" ? "Category" : "Category // " + props.activeCategory}</h2>
       <div className="line"></div>
-      {appendListItems(props.products)}
+      {renderListItems(props.products, props.handleClick)}
     </div>
   );
 };
