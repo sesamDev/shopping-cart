@@ -5,7 +5,6 @@ import React from "react";
 import { products } from "../../data/products";
 
 const Home = () => {
-  console.log(products.category.processors.img);
   return (
     <div data-testid="home" className="home">
       <div className="welcome-message">
@@ -15,10 +14,9 @@ const Home = () => {
       <div className="popular-categories">
         <h2>Visit our most popular categories</h2>
         <div>
-          <Card img={products.category.apple.img} title={products.category.apple.title} />
-          <Card img={products.category.graphicsCards.img} title={products.category.graphicsCards.title} />
-          <Card img={products.category.processors.img} title={products.category.processors.title} />
-          <Card img={products.category.keyboards.img} title={products.category.keyboards.title} />
+          {products.map((item) => {
+            return <Card key={item.id} title={item.category} img={item.img} />;
+          })}
         </div>
       </div>
     </div>
