@@ -1,0 +1,27 @@
+.line {
+  border-top: 5px solid black;
+}
+
+.productCategoriesList {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.listItem {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(135, 135, 135, 0.2);
+  margin-top: 8px;
+  border-radius: 0.2rem;
+  padding-left: 0.2rem;
+  cursor: pointer;
+}
+.listItem:hover {
+  background-color: rgba(135, 135, 135, 0.6);
+}
+
+.listItem:active {
+  background-color: rgba(135, 135, 135, 0.8);
+}
