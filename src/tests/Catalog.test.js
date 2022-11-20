@@ -1,7 +1,14 @@
-import React from "react";
+import "@testing-library/jest-dom";
 
-const Catalog = () => {
-  return <div>Catalog</div>;
-};
+import Catalog, { appendListItems } from "../components/routes/Catalog";
+import { render, screen } from "@testing-library/react";
 
-export default Catalog;
+import userEvent from "@testing-library/user-event";
+
+describe("List of categories", () => {
+  it("Does list component render?", () => {
+    render(<Catalog />);
+
+    expect(screen.getByTestId("productCategoriesList")).toBeInTheDocument();
+  });
+});
