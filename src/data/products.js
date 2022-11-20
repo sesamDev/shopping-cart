@@ -18,115 +18,122 @@ import ryzen7 from "../assets/images/ryzen7.webp";
 import steelseries from "../assets/images/steelseries.webp";
 import uniqid from "uniqid";
 
-export const products = {
-  category: {
-    apple: {
-      title: "Apple",
-      img: macbook,
-      id: uniqid(),
-      items: {
-        iphone14: {
+export const products = [
+  {
+    category: "Apple",
+    img: macbook,
+    id: uniqid(),
+    items: [
+      [
+        {
           title: "Iphone 14",
           img: iphone14,
           price: 1200,
         },
-        ipadPro: {
+      ],
+      [
+        {
           title: "iPad Pro",
           img: ipadPro,
           price: 1700,
         },
-        appleWatchUltra: {
+      ],
+      [
+        {
           title: "Apple Watch Ultra",
           img: appleWatchUltra,
           price: 999,
         },
-        macbookPro: {
+      ],
+      [
+        {
           title: "MacBook Pro",
           img: macbook,
           price: 2200,
         },
-      },
-    },
-    processors: {
-      title: "CPU's",
-      img: processor,
-      id: uniqid(),
-      items: {
-        cpu1: {
-          title: "AMD Ryzen 7 5800X3D",
-          img: ryzen7,
-          price: 400,
-        },
-        cpu2: {
-          title: "IAMD Ryzen 5 5600X",
-          img: ryzen5,
-          price: 200,
-        },
-        cpu3: {
-          title: "Intel Core i7-13700K",
-          img: corei7,
-          price: 600,
-        },
-        cpu4: {
-          title: "Intel Core i9-13900K",
-          img: corei9,
-          price: 800,
-        },
-      },
-    },
-    graphicsCards: {
-      title: "GPU's",
-      img: gpu,
-      id: uniqid(),
-      items: {
-        gpu1: {
-          title: "ASUS TUF GeForce RTX 4090 24GB Gaming OC",
-          img: rtx4090,
-          price: 2600,
-        },
-        gpu2: {
-          title: "ASUS TUF GeForce RTX 3080 10GB Gaming OC V2 (LHR)",
-          img: rtx3080,
-          price: 1100,
-        },
-        gpu3: {
-          title: "ASUS GeForce RTX 3060 12GB PHOENIX V2 (LHR)",
-          img: rtx3060,
-          price: 400,
-        },
-        gpu4: {
-          title: "ASUS ROG Strix GeForce RTX 3070 Ti Gaming OC 8GB",
-          img: rtx3070,
-          price: 1000,
-        },
-      },
-    },
-    keyboards: {
-      title: "Keyboards",
-      img: keyboard,
-      id: uniqid(),
-      items: {
-        k1: {
-          title: "Logitech MX Keys",
-          img: mxkeys,
-          price: 120,
-        },
-        k2: {
-          title: "Razer Blackwidow V3",
-          img: keyboard,
-          price: 130,
-        },
-        k3: {
-          title: "Keychron K2v2 RGB Aluminium Hot-Swap Gateron Brown",
-          img: keychron,
-          price: 120,
-        },
-        k4: {
-          title: "Steelseries Apex 3 TKL",
-          img: steelseries,
-          price: 60,
-        },
-      },
-    },
+      ],
+    ],
   },
-};
+  {
+    category: "Graphics cards",
+    img: gpu,
+    id: uniqid(),
+    items: [
+      {
+        title: "ASUS TUF GeForce RTX 4090 24GB Gaming OC",
+        img: rtx4090,
+        price: 2600,
+      },
+      {
+        title: "ASUS TUF GeForce RTX 3080 10GB Gaming OC V2 (LHR)",
+        img: rtx3080,
+        price: 1100,
+      },
+      {
+        title: "ASUS GeForce RTX 3060 12GB PHOENIX V2 (LHR)",
+        img: rtx3060,
+        price: 400,
+      },
+      {
+        title: "ASUS ROG Strix GeForce RTX 3070 Ti Gaming OC 8GB",
+        img: rtx3070,
+        price: 1000,
+      },
+    ],
+  },
+
+  {
+    category: "Processors",
+    img: processor,
+    id: uniqid(),
+    items: [
+      {
+        title: "AMD Ryzen 7 5800X3D",
+        img: ryzen7,
+        price: 400,
+      },
+      {
+        title: "IAMD Ryzen 5 5600X",
+        img: ryzen5,
+        price: 200,
+      },
+      {
+        title: "Intel Core i7-13700K",
+        img: corei7,
+        price: 600,
+      },
+      {
+        title: "Intel Core i9-13900K",
+        img: corei9,
+        price: 800,
+      },
+    ],
+  },
+  {
+    category: "Keyboards",
+    img: keyboard,
+    id: uniqid(),
+    items: [
+      {
+        title: "Logitech MX Keys",
+        img: mxkeys,
+        price: 120,
+      },
+      {
+        title: "Razer Blackwidow V3",
+        img: keyboard,
+        price: 130,
+      },
+      {
+        title: "Keychron K2v2 RGB Aluminium Hot-Swap Gateron Brown",
+        img: keychron,
+        price: 120,
+      },
+      {
+        title: "Steelseries Apex 3 TKL",
+        img: steelseries,
+        price: 60,
+      },
+    ],
+  },
+];
