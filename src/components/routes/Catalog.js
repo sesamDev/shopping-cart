@@ -6,7 +6,7 @@ import Card from "../Card";
 import ProductCategoriesList from "../ProductCategoriesList";
 import { products } from "../../data/products";
 
-const renderProducts = (activeCategory, products) => {
+const renderProducts = (activeCategory, products, buyFunction) => {
   const filteredProducts = products.filter((category) => category.category === activeCategory);
   let productList = products;
 
@@ -15,12 +15,21 @@ const renderProducts = (activeCategory, products) => {
   }
   return productList.map((category) => {
     return category.items.map((item) => {
-      return <Card img={item.img} title={item.title} price={item.price} key={item.id} />;
+      return (
+        <Card
+          img={item.img}
+          title={item.title}
+          price={item.price}
+          key={item.id}
+          handleBuyButton={buyFunction}
+          id={item.title}
+        />
+      );
     });
   });
 };
 
-const Catalog = () => {
+const Catalog = (props) => {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const handleCategoryClick = (e) => {
@@ -37,7 +46,7 @@ const Catalog = () => {
   return (
     <div data-testid="catalog" className="catalog">
       <ProductCategoriesList products={products} handleClick={handleCategoryClick} activeCategory={activeCategory} />
-      <div className="catalogOverview">{renderProducts(activeCategory, products)}</div>
+      <div className="catalogOverview">{renderProducts(activeCategory, products, props.handleBuyButton)}</div>
     </div>
   );
 };

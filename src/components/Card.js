@@ -14,14 +14,20 @@ const isInCatalog = (location) => {
 const Card = (props) => {
   const location = useLocation();
   return (
-    <div className="card">
+    <div className="card" data-id={props.id}>
       {isInCatalog(location.pathname)}
       <img src={props.img} alt="Card" />
       {isInCatalog(location.pathname) ? <p>{props.title}</p> : <h3>{props.title}</h3>}
       {hasPrice(props.price) ? (
         <div className="cardAddToCart">
           <p>{props.price + "$"}</p>
-          <button onClick={() => console.log("Buy")}>Add to cart</button>
+          <button
+            onClick={(e) => {
+              props.handleBuyButton(e);
+            }}
+          >
+            Add to cart
+          </button>
         </div>
       ) : (
         ""
