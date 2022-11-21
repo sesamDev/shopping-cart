@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
+  background-color: white;
+  height: 100vh;
 }
 
 .home > .welcome-message {
@@ -18,5 +20,4 @@
 .home > .popular-categories > div {
   display: flex;
   flex-direction: row;
-  gap: 70px;
 }

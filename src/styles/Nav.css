@@ -1,12 +1,14 @@
 .Nav {
   width: 100vw;
-  min-height: 200px;
+  min-height: 100px;
   background-color: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: 2.5rem;
+  background-color: black;
+  margin-bottom: 100px;
 }
 
 .nav-links {
@@ -19,7 +21,7 @@
 }
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .Nav > a > h1 {
