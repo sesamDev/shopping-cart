@@ -18,7 +18,14 @@ const Card = (props) => {
       {isInCatalog(location.pathname)}
       <img src={props.img} alt="Card" />
       {isInCatalog(location.pathname) ? <p>{props.title}</p> : <h3>{props.title}</h3>}
-      {hasPrice(props.price) ? <p>{props.price + "$"}</p> : ""}
+      {hasPrice(props.price) ? (
+        <div className="cardAddToCart">
+          <p>{props.price + "$"}</p>
+          <button onClick={() => console.log("Buy")}>Add to cart</button>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

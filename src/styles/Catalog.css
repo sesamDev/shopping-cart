@@ -13,8 +13,7 @@
   grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(auto-fill, 300px);
+  grid-template-rows: repeat(auto-fill, 380px);
   align-items: center;
   justify-content: center;
-  gap: 10px;
 }

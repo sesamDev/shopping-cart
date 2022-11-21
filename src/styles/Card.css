@@ -1,6 +1,6 @@
 .card {
   display: grid;
-  grid-template-rows: 2fr 0.5fr;
+  grid-template-rows: 80% 20%;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
@@ -23,4 +23,34 @@
   justify-self: center;
   font-size: 1.2rem;
   text-align: center;
+}
+
+.card > .cardAddToCart {
+  display: flex;
+
+  text-align: center;
+  justify-content: center;
+}
+.card > .cardAddToCart > button,
+.card > .cardAddToCart > p {
+  margin: 0 5px;
+  font-size: 1.6rem;
+}
+
+.card > .cardAddToCart > button {
+  border-radius: 0.5rem;
+  padding: 0 0.2rem;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: all 0.4 ease-in-out;
+  -moz-transition: all 0.4 ease-in-out;
+  -webkit-transition: all 0.4 ease-in-out;
+}
+
+.card > .cardAddToCart > button:hover {
+  background-color: rgb(52, 52, 52);
+}
+.card > .cardAddToCart > button:active {
+  background-color: rgb(221, 221, 221);
 }
