@@ -6,6 +6,7 @@ import Card from "../Card";
 import ProductCategoriesList from "../ProductCategoriesList";
 import { products } from "../../data/products";
 
+// Render products on screen based on activeCategory
 const renderProducts = (activeCategory, products, buyFunction) => {
   const filteredProducts = products.filter((category) => category.category === activeCategory);
   let productList = products;
