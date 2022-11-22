@@ -11,7 +11,11 @@ import Nav from "./components/Nav";
 
 const formatPrice = (price) => {
   const removeDollarSign = [...price].slice(0, -1).join("");
-  return removeDollarSign;
+  return Number(removeDollarSign);
+};
+
+const createCartItem = (product, formattedPrice) => {
+  return { item: product, price: formattedPrice, quantity: 1 };
 };
 
 function App() {
@@ -21,9 +25,10 @@ function App() {
   // Functions for adding items to cart
   const handleBuyButton = (e) => {
     const price = e.target.previousSibling.textContent;
-    const item = e.target.parentNode.parentNode.dataset.id;
+    let item = e.target.parentNode.parentNode.dataset.id;
     const formattedPrice = formatPrice(price);
-    return setCart((prev) => [].concat(prev, { item: item, price: formattedPrice, quantity: 1 }));
+    item = createCartItem(item, formattedPrice);
+    return setCart((prev) => [].concat(prev, item));
   };
   return (
     <div className="App">
