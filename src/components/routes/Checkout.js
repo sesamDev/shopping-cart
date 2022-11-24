@@ -1,3 +1,5 @@
+import "../../styles/Checkout.css";
+
 import React, { useEffect, useState } from "react";
 
 export const createRenderReadyCart = (cart) => {
@@ -17,12 +19,17 @@ export const createRenderReadyCart = (cart) => {
       item: curr,
       price: 0,
       quantity: 0,
+      img: "",
     };
     for (const obj of cart) {
       if (obj.item === curr) nObj.quantity++;
     }
     for (const obj of cart) {
       if (obj.item === curr && nObj.price === 0) nObj.price = obj.price;
+    }
+
+    for (const obj of cart) {
+      if (obj.item === curr) nObj.img = obj.img;
     }
 
     return nObj;
@@ -41,8 +48,18 @@ const Checkout = (props) => {
   }, [props.cart]);
   return (
     <div data-testid="checkout">
-      Checkout
-      <div>{console.log(renderCart)}</div>
+      <div className="checkoutOverview">
+        {renderCart.map((item) => {
+          return (
+            <div key={item.item} className="c-card">
+              <img src={item.img} alt={"Cart Item"} />
+              <p className="c-item">{item.item}</p>
+              <p className="c-price">Price: {item.price}$</p>
+              <p className="c-quantity">Quantity: {item.quantity}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
