@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.6f981dda.css",
-    "main.js": "/shopping-cart/static/js/main.fbc578d6.js",
+    "main.js": "/shopping-cart/static/js/main.3ee5b0ba.js",
     "static/media/apple-watch-ultra.jpeg": "/shopping-cart/static/media/apple-watch-ultra.67f3a20cf0d9ef8d56a2.jpeg",
     "static/media/3070ti.jpeg": "/shopping-cart/static/media/3070ti.4504e7635c7cf5a2f8be.jpeg",
     "static/media/4090.webp": "/shopping-cart/static/media/4090.3ef625570c8c8f7bb937.webp",
@@ -21,10 +21,10 @@
     "static/media/macbook.webp": "/shopping-cart/static/media/macbook.4a7be1053788dfb06ce6.webp",
     "index.html": "/shopping-cart/index.html",
     "main.6f981dda.css.map": "/shopping-cart/static/css/main.6f981dda.css.map",
-    "main.fbc578d6.js.map": "/shopping-cart/static/js/main.fbc578d6.js.map"
+    "main.3ee5b0ba.js.map": "/shopping-cart/static/js/main.3ee5b0ba.js.map"
   },
   "entrypoints": [
     "static/css/main.6f981dda.css",
-    "static/js/main.fbc578d6.js"
+    "static/js/main.3ee5b0ba.js"
   ]
 }
