@@ -14,20 +14,20 @@ const formatPrice = (price) => {
   return Number(removeDollarSign);
 };
 
-const createCartItem = (product, formattedPrice) => {
-  return { item: product, price: formattedPrice, quantity: 1 };
+const createCartItem = (product, image, formattedPrice) => {
+  return { item: product, price: formattedPrice, quantity: 1, img: image };
 };
 
 function App() {
   const [cart, setCart] = useState([]);
-  console.log(cart);
 
   // Functions for adding items to cart
   const handleBuyButton = (e) => {
     const price = e.target.previousSibling.textContent;
     let item = e.target.parentNode.parentNode.dataset.id;
+    let img = e.target.parentNode.parentNode.querySelector("img").src;
     const formattedPrice = formatPrice(price);
-    item = createCartItem(item, formattedPrice);
+    item = createCartItem(item, img, formattedPrice);
     return setCart((prev) => [].concat(prev, item));
   };
   return (
