@@ -1,0 +1,66 @@
+.checkout {
+  justify-content: center;
+  height: 100%;
+  background-color: white;
+  margin-bottom: 200px;
+}
+
+.checkoutOverview {
+  display: grid;
+  background-color: white;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5px;
+}
+
+.c-card {
+  display: grid;
+  text-align: center;
+  height: 90px;
+  min-width: 500px;
+  max-width: 1000px;
+  border: 1px solid black;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr;
+  gap: 20px;
+}
+
+.c-card > img {
+  max-height: 50%;
+  max-width: 40%;
+  justify-self: center;
+  align-self: center;
+}
+
+.c-card > p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
+
+.cartTotal {
+  margin-top: 50px;
+  width: 80%;
+  background-color: white;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.cartTotal > button {
+  font-size: 1.3rem;
+  height: 50px;
+  border-radius: 5px;
+  width: 90%;
+  align-self: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+.cartTotal > button:active {
+  background-color: rgb(81, 81, 81);
+  color: white;
+}

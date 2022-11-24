@@ -38,6 +38,12 @@ export const createRenderReadyCart = (cart) => {
   return summarizedCart;
 };
 
+const sumOfCart = (cart) => {
+  return cart.reduce((sum, curr) => {
+    return (sum += curr.price * curr.quantity);
+  }, 0);
+};
+
 const Checkout = (props) => {
   const [renderCart, setRenderCart] = useState([]);
   useEffect(() => {
@@ -47,7 +53,7 @@ const Checkout = (props) => {
     };
   }, [props.cart]);
   return (
-    <div data-testid="checkout">
+    <div data-testid="checkout" className="checkout">
       <div className="checkoutOverview">
         {renderCart.map((item) => {
           return (
@@ -59,6 +65,12 @@ const Checkout = (props) => {
             </div>
           );
         })}
+        <div className="cartTotal">
+          <h3>Cart</h3>
+          <div className="line"></div>
+          <p>{"Total sum: " + sumOfCart(renderCart) + "$"}</p>
+          <button>Checkout</button>
+        </div>
       </div>
     </div>
   );
