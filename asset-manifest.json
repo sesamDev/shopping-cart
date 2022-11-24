@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.6f981dda.css",
+    "main.js": "/shopping-cart/static/js/main.fbc578d6.js",
+    "static/media/apple-watch-ultra.jpeg": "/shopping-cart/static/media/apple-watch-ultra.67f3a20cf0d9ef8d56a2.jpeg",
+    "static/media/3070ti.jpeg": "/shopping-cart/static/media/3070ti.4504e7635c7cf5a2f8be.jpeg",
+    "static/media/4090.webp": "/shopping-cart/static/media/4090.3ef625570c8c8f7bb937.webp",
+    "static/media/ipad-pro.webp": "/shopping-cart/static/media/ipad-pro.02a2bc9ab460317aaea2.webp",
+    "static/media/gpu.webp": "/shopping-cart/static/media/gpu.ddfa813b946f99c62855.webp",
+    "static/media/3080.webp": "/shopping-cart/static/media/3080.91e5e549f30d4f8f76d5.webp",
+    "static/media/3060.webp": "/shopping-cart/static/media/3060.1dfcc7e0a1008ef646e5.webp",
+    "static/media/steelseries.webp": "/shopping-cart/static/media/steelseries.61b66c55b3afde5b55b6.webp",
+    "static/media/processor.webp": "/shopping-cart/static/media/processor.84609ef5983f8994c940.webp",
+    "static/media/ryzen7.webp": "/shopping-cart/static/media/ryzen7.84609ef5983f8994c940.webp",
+    "static/media/corei9.webp": "/shopping-cart/static/media/corei9.3d450052e691c3d7a435.webp",
+    "static/media/ryzen5.webp": "/shopping-cart/static/media/ryzen5.8debd22970b8f623e6c8.webp",
+    "static/media/corei7.webp": "/shopping-cart/static/media/corei7.7fabd544e66009df2c1f.webp",
+    "static/media/keyboard.webp": "/shopping-cart/static/media/keyboard.2c6dfd81aeb9ca48e934.webp",
+    "static/media/keychron.webp": "/shopping-cart/static/media/keychron.2a455d6c8d4dffc161aa.webp",
+    "static/media/iphone14.webp": "/shopping-cart/static/media/iphone14.24a64c5048468f082874.webp",
+    "static/media/macbook.webp": "/shopping-cart/static/media/macbook.4a7be1053788dfb06ce6.webp",
+    "index.html": "/shopping-cart/index.html",
+    "main.6f981dda.css.map": "/shopping-cart/static/css/main.6f981dda.css.map",
+    "main.fbc578d6.js.map": "/shopping-cart/static/js/main.fbc578d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f981dda.css",
+    "static/js/main.fbc578d6.js"
+  ]
+}
